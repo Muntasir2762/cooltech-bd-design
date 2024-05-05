@@ -28,6 +28,13 @@
       src="https://kit.fontawesome.com/942922f9a6.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- lightbox -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/lightbox2/dist/css/lightbox.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -474,7 +481,7 @@
 
     <section class="container mx-auto">
       <img src="/assets/images/projects.jpg" alt="" class="w-full" />
-      <div class="my-10 lg:my-20">
+      <div class="my-10 lg:my-20 px-2 lg:px-0">
         <h2 class="text-xl lg:text-4xl font-medium text-center">
           Confidence Cement
         </h2>
@@ -482,8 +489,92 @@
           Agrabad, Chittagong.
         </h3>
       </div>
-      <div></div>
+      <div
+        class="gallery grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center gap-5"
+      >
+        <div class="rounded-md relative">
+          <div>
+            <img src="/assets/images/Confidence-g1.jpg" class="rounded-md" />
+          </div>
+          <a
+            href="/assets/images/Confidence-g1.jpg"
+            data-lightbox="mygallery"
+            class="absolute inset-0 bg-[#000001] flex items-center justify-center text-white opacity-0 hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src="/assets/images/zoom.png"
+              alt=""
+              class="w-10 bg-primary p-1 rounded-md"
+            />
+          </a>
+        </div>
+        <div class="rounded-md relative">
+          <div>
+            <img src="/assets/images/Confidence-g2.jpg" class="rounded-md" />
+          </div>
+          <a
+            href="/assets/images/Confidence-g2.jpg"
+            data-lightbox="mygallery"
+            class="absolute inset-0 bg-[#000001] flex items-center justify-center text-white opacity-0 hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src="/assets/images/zoom.png"
+              alt=""
+              class="w-10 bg-primary p-1 rounded-md"
+            />
+          </a>
+        </div>
+        <div class="rounded-md relative">
+          <div>
+            <img src="/assets/images/Confidence-g3.jpg" class="rounded-md" />
+          </div>
+          <a
+            href="/assets/images/Confidence-g3.jpg"
+            data-lightbox="mygallery"
+            class="absolute inset-0 bg-[#000001] flex items-center justify-center text-white opacity-0 hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src="/assets/images/zoom.png"
+              alt=""
+              class="w-10 bg-primary p-1 rounded-md"
+            />
+          </a>
+        </div>
+        <div class="rounded-md relative">
+          <div>
+            <img src="/assets/images/Confidence-g4.jpg" class="rounded-md" />
+          </div>
+          <a
+            href="/assets/images/Confidence-g4.jpg"
+            data-lightbox="mygallery"
+            class="absolute inset-0 bg-[#000001] flex items-center justify-center text-white opacity-0 hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src="/assets/images/zoom.png"
+              alt=""
+              class="w-10 bg-primary p-1 rounded-md"
+            />
+          </a>
+        </div>
+        <div class="rounded-md relative">
+          <div>
+            <img src="/assets/images/Confidence-g5.jpg" class="rounded-md" />
+          </div>
+          <a
+            href="/assets/images/Confidence-g5.jpg"
+            data-lightbox="mygallery"
+            class="absolute inset-0 bg-[#000001] flex items-center justify-center text-white opacity-0 hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src="/assets/images/zoom.png"
+              alt=""
+              class="w-10 bg-primary p-1 rounded-md"
+            />
+          </a>
+        </div>
+      </div>
     </section>
+
     <!-- footer section -->
     <section class="mt-10">
       <footer class="bg-primary py-12">
@@ -589,5 +680,7 @@
     <!-- flowbite js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="/assets/js/index.js"></script>
+    <!-- lightbox -->
+    <script src="/lightbox2/dist/js/lightbox.min.js"></script>
   </body>
 </html>
