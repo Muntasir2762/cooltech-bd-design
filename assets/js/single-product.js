@@ -1,3 +1,4 @@
+// details tab
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-content");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("descriptionTab").style.display = "block";
 });
 
+// Review tab content
 const reviewTab = document.getElementById("reviewTab");
 fetch("/assets/data/reviews.json")
   .then((res) => res.json())

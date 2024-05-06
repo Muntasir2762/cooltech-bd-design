@@ -1,3 +1,4 @@
+// fixed border
 window.addEventListener("scroll", function () {
   const scrollTop = window.scrollY;
   const fixedNavbar = document.getElementById("fixedNavbar");
@@ -9,10 +10,10 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// banner
+// Home banner
 $(".fade").slick({
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2000,
   infinite: true,
   speed: 500,
   fade: true,
