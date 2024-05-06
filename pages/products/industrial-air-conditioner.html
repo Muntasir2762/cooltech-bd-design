@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industrial Air Cooler</title>
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/942922f9a6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2D409A",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="">
+      <nav class="bg-primary py-3 w-full hidden md:block">
+        <div class="container mx-auto px-2 flex justify-between items-center">
+          <div class="flex items-center justfy-center gap-2 text-white">
+            <a href="www.facebook.com"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png"
+                alt=""
+                class="w-10 bg-white rounded-full p-1.5 ring ring-black"
+            /></a>
+            <a href="www.twitter.com">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png"
+                alt=""
+                class="w-10 bg-white rounded-full p-1.5 ring ring-black"
+              />
+            </a>
+          </div>
+          <div class="flex items-center justfy-center gap-5 text-white">
+            <p>+88-01819380391</p>
+            <p>info@cooltech-bd.com</p>
+          </div>
+        </div>
+      </nav>
+      <nav class="bg-white border-gray-200 border-b">
+        <div
+          class="flex flex-wrap items-center justify-between mx-auto py-4 px-2 container mx-auto"
+        >
+          <a
+            href="/pages/home.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="/assets/images/cooltech-logo.png"
+              class="w-24"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul
+              class="flex flex-col font-extrabold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="/pages/home.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary hover:text-primary"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="projectsDropdownHover"
+                  data-dropdown-trigger="hover"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                >
+                  Products
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="projectsDropdownHover"
+                  class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="/pages/products/products.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Products All</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/residential-air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Residential Air Conditioner</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/commercial -air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Commercial Air Conditioner</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/industrial-air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Industrial Air Conditioner</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/pages/projects.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/gallery.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="aboutDropdown"
+                  data-dropdown-trigger="hover"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                >
+                  About Us
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="aboutDropdown"
+                  class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="/pages/about-us/about.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >About Cooltech</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/the-management.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >The Management</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/certification-awards.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Certification & Awards</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/clients.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Our valuable Clients</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/pages/contact-us.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="">
+        <nav
+          class="bg-white border-gray-200 border-b fixed top-0 right-0 left-0 z-50 hidden"
+          id="fixedNavbar"
+        >
+          <div
+            class="flex flex-wrap items-center justify-between mx-auto py-4 px-2 container mx-auto"
+          >
+            <a
+              href="/pages/home.html"
+              class="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <img
+                src="/assets/images/cooltech-logo.png"
+                class="w-24"
+                alt="Flowbite Logo"
+              />
+            </a>
+            <button
+              data-collapse-toggle="navbar-dropdown"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-dropdown"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul
+                class="flex flex-col font-extrabold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+              >
+                <li>
+                  <a
+                    href="/pages/home.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <button
+                    id="dropdownHoverButton"
+                    data-dropdown-toggle="projectsDropdownHover2"
+                    data-dropdown-trigger="hover"
+                    class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                  >
+                    Products
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="projectsDropdownHover2"
+                    class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="/pages/products/products.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Products All</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/residential-air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Residential Air Conditioner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/commercial -air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Commercial Air Conditioner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/industrial-air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Industrial Air Conditioner</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="/pages/projects.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Projects</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/gallery.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <button
+                    id="dropdownHoverButton"
+                    data-dropdown-toggle="aboutDropdown2"
+                    data-dropdown-trigger="hover"
+                    class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                  >
+                    About Us
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="aboutDropdown2"
+                    class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="/pages/about-us/about.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >About Cooltech</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/the-management.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >The Management</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/certification-awards.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Certification & Awards</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/clients.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Our valuable Clients</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="/pages/contact-us.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- banner -->
+    <section class="container relative mx-auto px-2 lg:px-0">
+      <div class="relative">
+        <div
+          class="absolute inset-0 bg-[url('https://img.freepik.com/free-photo/3d-rendering-ventilation-system_23-2149281318.jpg?t=st=1714811770~exp=1714815370~hmac=d85eed4d8063e9f0df947d0e85c53510816db73fb397f9fad6eb3e28feb4e95e&w=1060')] bg-center bg-local"
+        ></div>
+
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <div class="relative z-10 py-10">
+          <h2 class="text-xl text-center lg:text-3xl text-white font-extrabold">
+            Industrial Air Conditioner
+          </h2>
+          <div class="lg:flexitems-center gap-5 mx-auto justify-center py-32">
+            <div>
+              <img
+                src="/assets/images/cooltech-hitachi.jpg"
+                alt=""
+                class="w-3/4 mx-auto"
+              />
+            </div>
+            <div class="px-44 text-white">
+              <div>
+                <h3 class="text-lg my-3 lg:text-2xl font-extrabold">
+                  Split Type Air Conditioner
+                </h3>
+                <p>
+                  Proin quis tortor orci. Etiam at risus et justo dignissim
+                  congue. Donec congue lacinia dui.
+                </p>
+              </div>
+              <div class="my-5">
+                <h3 class="text-lg my-3 lg:text-2xl font-extrabold">
+                  Window Type Air Conditioner
+                </h3>
+                <p>
+                  Proin quis tortor orci. Etiam at risus et justo dignissim
+                  congue. Donec congue lacinia dui.
+                </p>
+              </div>
+              <div class="my-5">
+                <h3 class="text-lg my-3 lg:text-2xl font-extrabold">
+                  Portable Air Conditioner
+                </h3>
+                <p>
+                  Proin quis tortor orci. Etiam at risus et justo dignissim
+                  congue. Donec congue lacinia dui.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- products -->
+    <section class="container relative mx-auto px-2 lg:px-0">
+      <h2 class="text-xl text-center lg:text-3xl font-extrabold border-b py-10">
+        Industrial Air cooler
+      </h2>
+      <div
+        class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto items-center gap-6"
+      >
+        <div class="bg-white shadow-xl">
+          <a href="/pages/products/single-product.html">
+            <img
+              class="mx-auto text-center h-52 w-52"
+              src="/assets/images/Air-Handling-Unit.jpg"
+              alt=""
+            />
+            <div>
+              <h4 class="uppercase text-xl p-5">Ahu</h4>
+            </div></a
+          >
+        </div>
+        <div class="bg-white shadow-xl">
+          <a href="/pages/products/single-product.html">
+            <img
+              class="mx-auto text-center h-52 w-52"
+              src="/assets/images/BANANA-RIPENING-COLD-ROOMS.png"
+              alt=""
+            />
+            <div>
+              <h4 class="uppercase text-xl p-5">BANANA RIPENING COLD ROOMS</h4>
+            </div>
+          </a>
+        </div>
+        <div class="bg-white shadow-xl">
+          <a href="/pages/products/single-product.html">
+            <img
+              class="mx-auto text-center h-52 w-52"
+              src="/assets/images/Clean-Room-Air-Shower-100x100.jpg"
+              alt=""
+            />
+            <div>
+              <h4 class="uppercase text-xl p-5">CLEAN ROOM PRODUCTS</h4>
+            </div>
+          </a>
+        </div>
+        <div class="bg-white shadow-xl">
+          <a href="/pages/products/single-product.html">
+            <img
+              class="mx-auto text-center h-52 w-52"
+              src="/assets/images/Cold-room-product.jpg"
+              alt=""
+            />
+            <div>
+              <h4 class="uppercase text-xl p-5">COLD ROOM REFRIGERATION</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="mt-10">
+      <footer class="bg-primary py-12">
+        <div class="mx-auto container px-2 lg:px-0">
+          <div class="lg:flex items-center justify-between">
+            <div class="text-white">
+              <img
+                src="/assets/images/cooltech-logo.png"
+                alt=""
+                class="bg-white rounded-md"
+              />
+              <div class="mt-4">
+                <p class="my-2">
+                  Imam Mansion (2nd Floor), 360, CDA Avenue, <br />
+                  Dampara, Chittagong, Bangladesh.
+                </p>
+                <p class="my-2">+88-031-2868709</p>
+                <p class="my-2">info@cooltech-bd.com</p>
+                <p class="my-2">www.cooltech-bd.com</p>
+              </div>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Company
+              </h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <a href="/pages/about-us/about.html" class="hover:underline"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/contact-us.html" class="hover:underline"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/legals/FAQ.html" class="hover:underline"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Legal
+              </h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="/pages/legals/privacy-policy.html"
+                    class="hover:underline"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/legals/licensing.html" class="hover:underline"
+                    >Licensing</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="/pages/legals/terms-condition.html"
+                    class="hover:underline"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Newsletter
+              </h2>
+              <p class="text-white mb-6 text-sm">
+                Subscribe our Newsletter to get the latest news and insights
+              </p>
+              <form class="flex items-center max-w-lg mx-auto">
+                <label for="voice-search" class="sr-only">Search</label>
+                <div class="w-full flex items-center gap-2">
+                  <div>
+                    <input
+                      type="text"
+                      id="voice-search"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
+                      placeholder="Subscribe our newsletter"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm p-3"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer class="bg-gray-300 shadow">
+        <div class="w-full mx-auto container py-4 text-center">
+          <span class=""
+            >© 2024
+            <a href="https://flowbite.com/" class="hover:underline">Cooltech™</a
+            >. All Rights Reserved.
+          </span>
+        </div>
+      </footer>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+
+    <!-- flowbite js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

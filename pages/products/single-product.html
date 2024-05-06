@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahu</title>
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/942922f9a6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2D409A",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="">
+      <nav class="bg-primary py-3 w-full hidden md:block">
+        <div class="container mx-auto px-2 flex justify-between items-center">
+          <div class="flex items-center justfy-center gap-2 text-white">
+            <a href="www.facebook.com"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png"
+                alt=""
+                class="w-10 bg-white rounded-full p-1.5 ring ring-black"
+            /></a>
+            <a href="www.twitter.com">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png"
+                alt=""
+                class="w-10 bg-white rounded-full p-1.5 ring ring-black"
+              />
+            </a>
+          </div>
+          <div class="flex items-center justfy-center gap-5 text-white">
+            <p>+88-01819380391</p>
+            <p>info@cooltech-bd.com</p>
+          </div>
+        </div>
+      </nav>
+      <nav class="bg-white border-gray-200 border-b">
+        <div
+          class="flex flex-wrap items-center justify-between mx-auto py-4 px-2 container mx-auto"
+        >
+          <a
+            href="/pages/home.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="/assets/images/cooltech-logo.png"
+              class="w-24"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul
+              class="flex flex-col font-extrabold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="/pages/home.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary hover:text-primary"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="projectsDropdownHover"
+                  data-dropdown-trigger="hover"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                >
+                  Products
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="projectsDropdownHover"
+                  class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="/pages/products/products.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Products All</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/residential-air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Residential Air Conditioner</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/commercial -air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Commercial Air Conditioner</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/products/industrial-air-conditioner.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Industrial Air Conditioner</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/pages/projects.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/gallery.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="aboutDropdown"
+                  data-dropdown-trigger="hover"
+                  class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                >
+                  About Us
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="aboutDropdown"
+                  class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="/pages/about-us/about.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >About Cooltech</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/the-management.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >The Management</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/certification-awards.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Certification & Awards</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/pages/about-us/clients.html"
+                        class="block px-4 py-2 text-md hover:bg-gray-100"
+                        >Our valuable Clients</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/pages/contact-us.html"
+                  class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="">
+        <nav
+          class="bg-white border-gray-200 border-b fixed top-0 right-0 left-0 z-50 hidden"
+          id="fixedNavbar"
+        >
+          <div
+            class="flex flex-wrap items-center justify-between mx-auto py-4 px-2 container mx-auto"
+          >
+            <a
+              href="/pages/home.html"
+              class="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <img
+                src="/assets/images/cooltech-logo.png"
+                class="w-24"
+                alt="Flowbite Logo"
+              />
+            </a>
+            <button
+              data-collapse-toggle="navbar-dropdown"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-dropdown"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul
+                class="flex flex-col font-extrabold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+              >
+                <li>
+                  <a
+                    href="/pages/home.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <button
+                    id="dropdownHoverButton"
+                    data-dropdown-toggle="projectsDropdownHover2"
+                    data-dropdown-trigger="hover"
+                    class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                  >
+                    Products
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="projectsDropdownHover2"
+                    class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="/pages/products/products.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Products All</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/residential-air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Residential Air Conditioner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/commercial -air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Commercial Air Conditioner</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/products/industrial-air-conditioner.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Industrial Air Conditioner</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="/pages/projects.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Projects</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/gallery.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <button
+                    id="dropdownHoverButton"
+                    data-dropdown-toggle="aboutDropdown2"
+                    data-dropdown-trigger="hover"
+                    class="flex items-center justify-between w-full py-2 px-3 rounded hover:text-primary font-medium md:p-0 md:w-auto"
+                  >
+                    About Us
+                    <svg
+                      class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="aboutDropdown2"
+                    class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li>
+                        <a
+                          href="/pages/about-us/about.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >About Cooltech</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/the-management.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >The Management</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/certification-awards.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Certification & Awards</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/pages/about-us/clients.html"
+                          class="block px-4 py-2 text-md hover:bg-gray-100"
+                          >Our valuable Clients</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="/pages/contact-us.html"
+                    class="block py-2 px-3 font-medium text-black rounded md:p-0 hover:text-primary"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Product details -->
+    <section class="container relative mx-auto px-2 lg:px-0">
+      <h2 class="text-xl text-center lg:text-3xl font-extrabold border-b py-10">
+        Ahu
+      </h2>
+      <div class="my-10 lg:flex items-center gap-5 justify-between">
+        <div class="lg:w-1/3">
+          <img src="/assets/images/Air-Handling-Unit.jpg" alt="" />
+        </div>
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl uppercase">Ahu</h3>
+          <hr class="border-2 border-red-600 me-[700px]" />
+          <div>
+            <hr class="border-t-2 my-6" />
+            <h4 class="text-xl font-medium pt-4">
+              Optimize Air Quality and Efficiency in Bangladesh with Tritech’s
+              AHU Solutions.
+            </h4>
+            <p class="text-gray-600">
+              Tritech, your trusted partner in Bangladesh, offers
+              top-of-the-line Air Handling Units (AHUs) from leading brands like
+              System Air, Daikin, Tica, and Saiver. Upgrade your commercial,
+              industrial, or food and pharma facility with AHUs specifically
+              designed to address Bangladeshi challenges. Enjoy unmatched
+              selection, expert guidance, and tailored solutions for improved
+              air quality, reduced energy costs, and enhanced productivity.
+            </p>
+            <h4 class="my-4">Brand we Provide-</h4>
+            <ul class="ms-12 my-4">
+              <li class="list-disc">System Air</li>
+              <li class="list-disc">Daikin</li>
+              <li class="list-disc">Tica</li>
+              <li class="list-disc">Dunham</li>
+              <li class="list-disc">Bush</li>
+              <li class="list-disc">Saiver</li>
+            </ul>
+            <div class="text-center mb-10">
+              <a
+                href="/pages/contact-us.html"
+                class="py-4 px-6 bg-primary text-white my-4 rounded-md"
+                >Contact us</a
+              >
+            </div>
+            <div class="border-t">
+              <p class="my-2">Category: AHU</p>
+              <p>
+                Tags: AHU, AHU for Cleanrooms, AHU Supplier, AHU Supplier in
+                Bangladesh, AHU Supplier in Dhaka, AHU with Heat Exchanger, Air
+                Handling Unit, Best AHU for BD, Best AHU in BD, Best Commercial
+                AHU Solutions, Clean Room Air conditioning, Commercial AHU,
+                Commercial Air Conditioning, Commercial Building AHU, Double
+                Skin AHU, Energy-Efficient AHU, Heat Recovery AHU, High-Capacity
+                AHU, High-Quality AHU, Hospital AHU, Hospital Air conditioning,
+                HVAC AHU, Hygenic AHU, Industrial AHU, Industrial Air
+                Conditioning, Industrial Air Handling Unit, Jacquard Factory Air
+                Conditioning, Pharmaceutical AHU, Pharmaceutical Air
+                conditioning, Quality AHU Supplier Dhaka, Textile Air
+                Conditioning
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Product details Tabs -->
+      <div class="my-10 bg-white border border-gray-200 rounded-xl">
+        <!-- Tab button -->
+        <ul
+          class="flex-shrink gap-5 md:flex px-10 mt-6 justify-start items-center text-sm font-medium text-center text-gray-500"
+          id="tabContainer"
+        >
+          <li class="my-1">
+            <button
+              class="tab-btn inline-block px-1 lg:px-4 py-3 text-white bg-primary rounded-lg active"
+              data-tab="description"
+            >
+              Description
+            </button>
+          </li>
+          <li class="my-1">
+            <button
+              class="tab-btn inline-block px-1 lg:px-4 py-3 text-black bg-gray-200 rounded-lg"
+              data-tab="review"
+            >
+              Reviews
+            </button>
+          </li>
+          <li class="my-1">
+            <button
+              class="tab-btn inline-block px-1 lg:px-4 py-3 text-black bg-gray-200 rounded-lg"
+              data-tab="policy"
+            >
+              Product Policy
+            </button>
+          </li>
+        </ul>
+        <!--Description Tab content -->
+        <div class="px-2 lg:px-10">
+          <div class="tab-content my-10" id="descriptionTab">
+            Description Content Here Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Omnis, dolorum minus. Tempore incidunt quo
+            expedita, dolore cum maiores et aliquam porro accusamus magni nobis
+            quas dolores facere animi doloribus beatae eum aut obcaecati id
+            optio quibusdam? Minus consequuntur quae corrupti non eligendi
+            distinctio nihil sint animi, iure nulla cum debitis! Animi,
+            quibusdam repellat in non ipsum incidunt magnam vitae aliquam quod
+            debitis iusto praesentium, quis blanditiis ut laborum. Reiciendis
+            eius distinctio consequuntur labore excepturi a consectetur unde sed
+            atque dolore. Delectus, tenetur dolores sint eum voluptas nobis
+            temporibus officia aut. Provident eaque dolor eius possimus cum
+            voluptate minus ipsa, ea, vel quis assumenda esse. Sit mollitia
+            nobis nulla est excepturi tempore voluptatem consequatur cum minima
+            quis quam laudantium, velit, repudiandae ea ullam dicta. Incidunt
+            deleniti vitae doloribus porro veniam aperiam explicabo doloremque
+            consequatur. Quae voluptatibus harum qui, porro libero cumque
+            mollitia saepe autem deserunt ipsum? Voluptatibus beatae sit
+            voluptates? Quisquam expedita explicabo quidem molestiae ut impedit
+            deserunt laboriosam autem assumenda sed, temporibus veniam
+            voluptates! Placeat ex repudiandae neque. Repudiandae esse eum
+            veniam fugiat eveniet quos incidunt nobis suscipit earum vero! Sit
+            culpa ipsa doloremque non debitis, natus repellendus reiciendis
+            vitae delectus corporis laboriosam consequatur illum aperiam
+            accusamus ea officia esse.
+          </div>
+          <!-- Review tab -->
+          <div
+            class="tab-content my-10 rounded-md"
+            id="reviewTab"
+            style="display: none"
+          ></div>
+          <!-- policy tab -->
+          <div class="tab-content my-10" id="policyTab" style="display: none">
+            <p>
+              First, inspect the product, then pay the delivery person. <br />
+
+              The product used is not returnable.
+            </p>
+            <button class="mt-10">Call Us: +8801648177071</button>
+            <form mailto="banggomartbd@gmail.com">
+              Email: banggomartbd@gmail.com
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="mt-10">
+      <footer class="bg-primary py-12">
+        <div class="mx-auto container px-2 lg:px-0">
+          <div class="lg:flex items-center justify-between">
+            <div class="text-white">
+              <img
+                src="/assets/images/cooltech-logo.png"
+                alt=""
+                class="bg-white rounded-md"
+              />
+              <div class="mt-4">
+                <p class="my-2">
+                  Imam Mansion (2nd Floor), 360, CDA Avenue, <br />
+                  Dampara, Chittagong, Bangladesh.
+                </p>
+                <p class="my-2">+88-031-2868709</p>
+                <p class="my-2">info@cooltech-bd.com</p>
+                <p class="my-2">www.cooltech-bd.com</p>
+              </div>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Company
+              </h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <a href="/pages/about-us/about.html" class="hover:underline"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/contact-us.html" class="hover:underline"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/legals/FAQ.html" class="hover:underline"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Legal
+              </h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="/pages/legals/privacy-policy.html"
+                    class="hover:underline"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a href="/pages/legals/licensing.html" class="hover:underline"
+                    >Licensing</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="/pages/legals/terms-condition.html"
+                    class="hover:underline"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Newsletter
+              </h2>
+              <p class="text-white mb-6 text-sm">
+                Subscribe our Newsletter to get the latest news and insights
+              </p>
+              <form class="flex items-center max-w-lg mx-auto">
+                <label for="voice-search" class="sr-only">Search</label>
+                <div class="w-full flex items-center gap-2">
+                  <div>
+                    <input
+                      type="text"
+                      id="voice-search"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
+                      placeholder="Subscribe our newsletter"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm p-3"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer class="bg-gray-300 shadow">
+        <div class="w-full mx-auto container py-4 text-center">
+          <span class=""
+            >© 2024
+            <a href="https://flowbite.com/" class="hover:underline">Cooltech™</a
+            >. All Rights Reserved.
+          </span>
+        </div>
+      </footer>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+
+    <!-- flowbite js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="/assets/js/single-product.js"></script>
+  </body>
+</html>

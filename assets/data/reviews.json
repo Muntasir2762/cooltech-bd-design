@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "userProfile": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "userName": "John Doe",
+    "isVerified": true,
+    "review": "Excellent product, very satisfied with the quality.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "userProfile": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "userName": "Jane Smith",
+    "isVerified": false,
+    "review": "Not as described, had some issues with the product.",
+    "rating": 2.5
+  },
+  {
+    "id": 3,
+    "userProfile": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "userName": "Alice Johnson",
+    "isVerified": true,
+    "review": "Good product, met my expectations.",
+    "rating": 1
+  }
+]
